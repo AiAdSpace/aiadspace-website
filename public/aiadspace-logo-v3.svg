@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 72" fill="none" width="380" height="72">
+  <defs>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- ICON -->
+  <rect x="4" y="10" width="52" height="52" rx="13" fill="url(#brandGrad)" opacity="0.12"/>
+  <rect x="4" y="10" width="52" height="52" rx="13" stroke="url(#brandGrad)" stroke-width="1.5" fill="none"/>
+  <rect x="15" y="43" width="5.5" height="13" rx="2.75" fill="url(#iconGrad)" opacity="0.45"/>
+  <rect x="23.5" y="34" width="5.5" height="22" rx="2.75" fill="url(#iconGrad)" opacity="0.7"/>
+  <rect x="32" y="24" width="5.5" height="32" rx="2.75" fill="url(#iconGrad)"/>
+  <circle cx="34.75" cy="20" r="3.2" fill="url(#brandGrad)" filter="url(#glow)"/>
+
+  <!-- WORDMARK as single <text> so no gaps -->
+  <!-- Background-friendly: use a clipPath trick to split color within one string -->
+  <!-- "AiAd" portion in gradient, "Space" in dark -->
+  
+  <!-- Dark version of full word for white bg (rendered below as fallback shape) -->
+  <!-- Gradient fill rect clipped to text -->
+  <defs>
+    <clipPath id="textClip">
+      <text x="70" y="49"
+        font-family="'SF Pro Display', 'Helvetica Neue', Arial, sans-serif"
+        font-size="33"
+        font-weight="700"
+        letter-spacing="-1.2">AiAdSpace</text>
+    </clipPath>
+    <clipPath id="boldClip">
+      <text x="70" y="49"
+        font-family="'SF Pro Display', 'Helvetica Neue', Arial, sans-serif"
+        font-size="33"
+        font-weight="700"
+        letter-spacing="-1.2">AiAd</text>
+    </clipPath>
+  </defs>
+
+  <!-- Full word in neutral dark first (Space portion) -->
+  <text x="70" y="49"
+    font-family="'SF Pro Display', 'Helvetica Neue', Arial, sans-serif"
+    font-size="33"
+    font-weight="700"
+    letter-spacing="-1.2"
+    fill="#1a1a2e">AiAdSpace</text>
+
+  <!-- Gradient overlay clipped to just "AiAd" characters (~4 chars = ~88px wide) -->
+  <rect x="70" y="18" width="94" height="36" fill="url(#brandGrad)" clip-path="url(#boldClip)"/>
+
+  <!-- TAGLINE — subtle, small, tight -->
+  <text x="71" y="62"
+    font-family="'SF Pro Display', 'Helvetica Neue', Arial, sans-serif"
+    font-size="7.5"
+    font-weight="500"
+    letter-spacing="2.2"
+    fill="#8B5CF6"
+    opacity="0.6">AI SEARCH &amp; VISIBILITY AGENCY</text>
+</svg>

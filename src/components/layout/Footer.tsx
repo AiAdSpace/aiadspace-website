@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Twitter, Linkedin, Github } from "lucide-react";
+import { Twitter, Linkedin, Github, Mail, Phone } from "lucide-react";
 import { SITE_CONFIG, FOOTER_LINKS } from "@/lib/constants";
 
 export default function Footer() {
@@ -12,19 +12,38 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block mb-4">
               <Image
-                src="/aiadspace-logo-v3.svg"
+                src="/aiadspace-logo-v4.svg"
                 alt="AiAdSpace"
                 width={160}
                 height={36}
                 className="h-8 w-auto"
               />
             </Link>
-            <p className="text-text-secondary text-sm leading-relaxed max-w-xs">
+            <p className="text-text-secondary text-sm leading-relaxed max-w-xs mb-5">
               Leading brands into the era of AI-powered search. We ensure your
               brand is the answer, not just an option.
             </p>
+
+            {/* Contact Info */}
+            <div className="space-y-2 mb-6">
+              <a
+                href="mailto:hello@aiadspace.in"
+                className="flex items-center gap-2 text-text-muted text-sm hover:text-brand-blue transition-colors duration-200"
+              >
+                <Mail size={14} />
+                hello@aiadspace.in
+              </a>
+              <a
+                href="tel:+918928739373"
+                className="flex items-center gap-2 text-text-muted text-sm hover:text-brand-blue transition-colors duration-200"
+              >
+                <Phone size={14} />
+                +91 89287 39373
+              </a>
+            </div>
+
             {/* Social Icons */}
-            <div className="flex items-center gap-4 mt-6">
+            <div className="flex items-center gap-4">
               <Link
                 href={SITE_CONFIG.social.twitter}
                 target="_blank"

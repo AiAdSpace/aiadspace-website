@@ -38,7 +38,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
-            src="/aiadspace-logo-v3.svg"
+            src="/aiadspace-logo-v4.svg"
             alt="AiAdSpace"
             width={180}
             height={40}
@@ -67,10 +67,10 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-3">
           <Button href="/apply" variant="outline" size="sm">
-            Sign In
+            Book a Free Call
           </Button>
           <Button href="/apply" variant="gradient" size="sm">
-            Get Started
+            Apply
           </Button>
         </div>
 
@@ -103,10 +103,10 @@ export default function Navbar() {
             ))}
             <div className="flex flex-col gap-3 pt-2 border-t border-surface-border">
               <Button href="/apply" variant="outline" size="sm" fullWidth>
-                Sign In
+                Book a Free Call
               </Button>
               <Button href="/apply" variant="gradient" size="sm" fullWidth>
-                Get Started
+                Apply
               </Button>
             </div>
           </div>

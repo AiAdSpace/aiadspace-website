@@ -222,6 +222,93 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
+      {/* ── 5 FACTORS THAT DETERMINE AI VISIBILITY ── */}
+      <section className="section-padding max-w-7xl mx-auto px-6">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-surface-border bg-surface-card text-text-secondary text-xs font-medium mb-4">
+            ✦ The Science Behind AEO
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
+            The 5 Factors That Determine{" "}
+            <span className="gradient-text">Your AI Visibility</span>
+          </h2>
+          <p className="text-text-secondary text-base max-w-xl mx-auto">
+            AI models don't rank brands randomly. These are the exact signals they
+            use to decide who gets cited — and who gets ignored.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {[
+            {
+              number: "01",
+              icon: "🧠",
+              title: "Semantic Authority",
+              desc: "How deeply and consistently your brand is associated with your core topic across the web. The more AI systems see your brand linked to a concept, the more they trust you as the authority on it.",
+              color: "from-brand-blue/20 to-brand-blue/5",
+              border: "border-brand-blue/30",
+            },
+            {
+              number: "02",
+              icon: "🔗",
+              title: "Citation Quality",
+              desc: "Which sources mention your brand matters as much as how often. Citations from trusted publications, high-authority sites, and expert sources carry far more weight in AI training data.",
+              color: "from-brand-violet/20 to-brand-violet/5",
+              border: "border-brand-violet/30",
+            },
+            {
+              number: "03",
+              icon: "🏷️",
+              title: "Entity Consistency",
+              desc: "Your brand name, description, and category must be consistent across every platform AI models crawl — your website, Wikipedia, social profiles, and press mentions must all agree.",
+              color: "from-cyan-500/20 to-cyan-500/5",
+              border: "border-cyan-500/30",
+            },
+            {
+              number: "04",
+              icon: "⚙️",
+              title: "Structured Data",
+              desc: "Schema markup and machine-readable metadata on your website tell AI crawlers exactly what your brand does, who it serves, and why it's credible — in a language they understand natively.",
+              color: "from-green-500/20 to-green-500/5",
+              border: "border-green-500/30",
+            },
+            {
+              number: "05",
+              icon: "📚",
+              title: "Topical Density",
+              desc: "The breadth and depth of quality content covering your niche signals expertise. Brands that comprehensively cover their topic from every angle are seen as definitive sources by AI models.",
+              color: "from-orange-500/20 to-orange-500/5",
+              border: "border-orange-500/30",
+            },
+            {
+              number: "✦",
+              icon: "🚀",
+              title: "We Optimise All 5",
+              desc: "Most agencies understand SEO. We understand how AI systems think. Our methodology targets every one of these factors simultaneously — that's why our clients get cited and competitors don't.",
+              color: "from-brand-blue/20 via-brand-violet/20 to-brand-blue/10",
+              border: "border-brand-blue/40",
+              highlight: true,
+            },
+          ].map((item, i) => (
+            <div
+              key={i}
+              className={`relative rounded-2xl border ${item.border} bg-gradient-to-br ${item.color} p-7 hover:-translate-y-1 transition-transform duration-300 ${item.highlight ? "sm:col-span-2 lg:col-span-1" : ""}`}
+            >
+              <div className="flex items-start gap-4 mb-4">
+                <div className="text-2xl flex-shrink-0">{item.icon}</div>
+                <div>
+                  <span className="text-text-muted text-xs font-mono tracking-widest">{item.number}</span>
+                  <h3 className={`font-bold text-base mt-0.5 ${item.highlight ? "gradient-text" : "text-text-primary"}`}>
+                    {item.title}
+                  </h3>
+                </div>
+              </div>
+              <p className="text-text-secondary text-sm leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <Footer />
     </main>
   );

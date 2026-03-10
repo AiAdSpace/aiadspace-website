@@ -121,7 +121,7 @@ export const VALUE_PROPS = [
 
 export const STATS = [
   { value: "10+", label: "AI Platforms Monitored" },
-  { value: "2025", label: "India-First AEO Agency" },
+  { value: "2026", label: "India-First AEO Agency" },
   { value: "D2C · SaaS · EdTech", label: "Industries Served" },
 ];
 
@@ -161,7 +161,7 @@ export const BLOG_POSTS = [
     title: "Why Your Brand Doesn't Show Up on ChatGPT (And How to Fix It)",
     excerpt:
       "Traditional SEO is dead. Learn how Answer Engine Optimization ensures your brand is the primary source for LLM-generated responses.",
-    date: "March 2025",
+    date: "March 2026",
     slug: "why-your-brand-doesnt-show-up-on-chatgpt",
     gradient: "from-blue-500/20 to-violet-500/20",
   },
@@ -171,7 +171,7 @@ export const BLOG_POSTS = [
     title: "OpenAI's New Ad Program: What Brands Need to Know in 2025",
     excerpt:
       "The landscape of digital advertising is shifting from banner ads to contextually relevant AI suggestions. We break down the beta features.",
-    date: "February 2025",
+    date: "February 2026",
     slug: "openai-new-ad-program-2025",
     gradient: "from-violet-500/20 to-blue-500/20",
   },
@@ -181,7 +181,7 @@ export const BLOG_POSTS = [
     title: "AEO vs SEO: The Key Differences Every Marketer Must Understand",
     excerpt:
       "Understanding the paradigm shift from keywords to intents is critical for survival in the next decade of search behavior.",
-    date: "January 2025",
+    date: "January 2026",
     slug: "aeo-vs-seo-key-differences",
     gradient: "from-blue-500/20 to-cyan-500/20",
   },

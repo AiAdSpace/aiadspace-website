@@ -4,7 +4,7 @@ import GradientText from "@/components/ui/GradientText";
 
 const stats = [
   { value: "10+", label: "AI Platforms Monitored" },
-  { value: "2025", label: "Founded" },
+  { value: "2026", label: "Founded" },
   { value: "India-First", label: "AEO Agency" },
 ];
 
@@ -33,45 +33,66 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Founder Story */}
+      {/* ── EXPANDED FOUNDER SECTION ── */}
       <section className="max-w-7xl mx-auto px-6 pb-24">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
-          {/* Avatar */}
-          <div className="flex flex-col items-center md:items-start gap-4">
-            <div className="w-28 h-28 rounded-full bg-gradient-to-br from-brand-blue/30 to-brand-violet/30 border-2 border-brand-blue/40 flex items-center justify-center text-5xl">
+
+          {/* Avatar + Identity */}
+          <div className="flex flex-col items-center md:items-start gap-5">
+            {/* Circular photo placeholder */}
+            <div className="w-32 h-32 rounded-full bg-gradient-to-br from-brand-blue/30 to-brand-violet/30 border-2 border-brand-blue/40 flex items-center justify-center text-5xl shadow-xl shadow-brand-blue/10">
               👤
             </div>
             <div>
-              <div className="text-text-primary font-semibold text-lg">Aayush Kumbhar</div>
-              <div className="text-brand-blue text-sm">Founder, AiAdSpace</div>
+              <div className="text-text-primary font-bold text-xl">Aayush Kumbhar</div>
+              <div className="text-brand-blue text-sm font-medium mt-1">Founder, AiAdSpace</div>
             </div>
+
+            {/* LinkedIn button */}
+            <a
+              href="https://linkedin.com/in/aayushkumbhar"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-brand-blue/40 text-brand-blue text-sm font-medium hover:bg-brand-blue/10 transition-colors duration-200"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+              Connect on LinkedIn
+            </a>
           </div>
 
-          {/* Story */}
-          <div className="md:col-span-2 space-y-5 text-text-secondary leading-relaxed">
-            <p>
-              For over a decade, the digital world operated on a simple premise:
-              you ask a search engine a question, it gives you ten blue links,
-              and you do the work of finding the answer. As a developer building
-              tools for this ecosystem, I saw the cracks forming early. When
-              Large Language Models emerged, the paradigm didn't just
-              shift — it shattered.
-            </p>
-            <p>
-              I realized that brands were still pouring millions into SEO
-              strategies designed for a 2010 internet. They were optimizing for
-              clicks while the world was moving toward answers. If ChatGPT or
-              Perplexity is the interface, being 'on the first page' of Google
-              is no longer the win. Being the data source the AI trusts is the
-              only win.
-            </p>
-            <p>
-              I built AiAdSpace to solve this specific, growing gap. We don't
-              just 'rank' your brand — we engineer its visibility into the
-              neural networks that now guide consumer decisions. We are moving
-              beyond keywords into the era of semantic authority and AI-native
-              brand recognition.
-            </p>
+          {/* Story + Pull Quote */}
+          <div className="md:col-span-2 space-y-6">
+            <div className="space-y-5 text-text-secondary leading-relaxed">
+              <p>
+                For years, the digital world operated on a simple premise: you ask a search engine
+                a question, it gives you ten blue links, and you find the answer yourself. As a
+                software engineer building tools for this ecosystem, I saw the cracks forming early.
+                When Large Language Models emerged, the paradigm didn't just shift — it shattered.
+              </p>
+              <p>
+                Brands were still pouring budgets into SEO strategies designed for a 2010 internet.
+                They were optimizing for clicks while the world was moving toward answers. If
+                ChatGPT or Perplexity is the interface, being "on the first page" of Google is no
+                longer the win. Being the source the AI trusts is the only win.
+              </p>
+              <p>
+                I built AiAdSpace to close this gap — using my engineering background to understand
+                not just how AI systems behave, but why. We engineer your brand's visibility into
+                the neural networks that now guide consumer decisions.
+              </p>
+            </div>
+
+            {/* Pull Quote */}
+            <blockquote className="relative rounded-2xl border border-brand-blue/30 bg-gradient-to-br from-brand-blue/10 to-brand-violet/10 px-7 py-6 mt-4">
+              <div className="absolute -top-3 left-6 text-brand-blue text-4xl font-serif leading-none">"</div>
+              <p className="text-text-primary font-medium text-base md:text-lg leading-relaxed italic pt-2">
+                As a software engineer, I understand how AI systems are trained — not just how to
+                game them. That's what makes AiAdSpace different.
+              </p>
+              <footer className="mt-3 text-text-muted text-sm font-medium">— Aayush Kumbhar, Founder</footer>
+            </blockquote>
           </div>
         </div>
       </section>
@@ -92,16 +113,9 @@ export default function AboutPage() {
       <section className="max-w-7xl mx-auto px-6 pb-24">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {stats.map((stat) => (
-            <div
-              key={stat.label}
-              className="card-dark p-8 border-l-2 border-brand-blue/40"
-            >
-              <div className="text-4xl font-bold gradient-text mb-2">
-                {stat.value}
-              </div>
-              <div className="text-text-muted text-sm uppercase tracking-widest">
-                {stat.label}
-              </div>
+            <div key={stat.label} className="card-dark p-8 border-l-2 border-brand-blue/40">
+              <div className="text-4xl font-bold gradient-text mb-2">{stat.value}</div>
+              <div className="text-text-muted text-sm uppercase tracking-widest">{stat.label}</div>
             </div>
           ))}
         </div>

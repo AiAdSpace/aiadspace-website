@@ -284,7 +284,7 @@ export default function InsightsPage() {
           <div className="absolute inset-0 bg-gradient-to-br from-brand-blue/5 to-brand-violet/5 pointer-events-none" />
           <div className="relative">
             <h2 className="text-2xl md:text-3xl font-bold text-text-primary mb-3">
-              Get AI Visibility Tips in Your Inbox
+              Get our weekly AI Visibility Report — see which Indian brands are winning and losing in AI search this week.
             </h2>
             <p className="text-text-secondary text-sm mb-8 max-w-md mx-auto">
               Join marketing leaders receiving our monthly deep-dive into AI

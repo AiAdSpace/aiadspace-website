@@ -6,8 +6,8 @@ export const SITE_CONFIG = {
   email: "hello@aiadspace.in",
   url: "https://aiadspace.in",
   social: {
-    twitter: "https://twitter.com/aiadspace",
-    linkedin: "https://linkedin.com/company/aiadspace",
+    twitter: "https://x.com/AiAdSpace_in",
+    linkedin: "https://www.linkedin.com/company/aiadspace-in",
     github: "https://github.com/AiAdSpace",
   },
 };

@@ -66,8 +66,8 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-3">
-          <Button href="/apply" variant="outline" size="sm">
-            Book a Free Call
+          <Button href="/#snapshot" variant="outline" size="sm">
+            Get Free AI Snapshot
           </Button>
           <Button href="/apply" variant="gradient" size="sm">
             Apply
@@ -102,8 +102,8 @@ export default function Navbar() {
               </Link>
             ))}
             <div className="flex flex-col gap-3 pt-2 border-t border-surface-border">
-              <Button href="/apply" variant="outline" size="sm" fullWidth>
-                Book a Free Call
+              <Button href="/#snapshot" variant="outline" size="sm" fullWidth>
+                Get Free AI Snapshot
               </Button>
               <Button href="/apply" variant="gradient" size="sm" fullWidth>
                 Apply

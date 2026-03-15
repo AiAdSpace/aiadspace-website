@@ -4,311 +4,322 @@ import { useState } from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import GradientText from "@/components/ui/GradientText";
-import { Calendar, ChevronDown, ChevronUp } from "lucide-react";
 
-const categoryColors: Record<string, string> = {
-  AEO: "text-brand-blue border-brand-blue/30 bg-brand-blue/10",
-  "AI Ads": "text-brand-violet border-brand-violet/30 bg-brand-violet/10",
-  Strategy: "text-cyan-400 border-cyan-400/30 bg-cyan-400/10",
-};
-
-const BLOG_POSTS = [
+const POSTS = [
   {
-    id: 1,
-    title: "Why Your Brand Doesn't Show Up on ChatGPT (And How to Fix It)",
-    excerpt:
-      "Traditional SEO is dead. Learn how Answer Engine Optimization ensures your brand is the primary source for LLM-generated responses.",
+    id: "1",
     category: "AEO",
-    date: "March 2025",
-    gradient: "from-blue-900 via-blue-800 to-indigo-900",
-    content: `
-Most brands obsess over Google rankings. But here's the uncomfortable truth: when someone asks ChatGPT "what's the best project management tool for startups?", Google rankings don't matter at all.
+    categoryColor: "text-brand-blue border-brand-blue/30 bg-brand-blue/10",
+    title: "Why Your Brand Doesn't Show Up on ChatGPT (And How to Fix It)",
+    excerpt: "Traditional SEO is dead. Learn how Answer Engine Optimization ensures your brand is the primary source for LLM-generated responses.",
+    date: "March 2026",
+    gradient: "from-blue-500/20 to-violet-500/20",
+    content: `If you've ever typed your brand name into ChatGPT and watched it recommend a competitor instead, you're not alone. This is the new visibility crisis — and most Indian brands have no idea it's happening.
 
-**The New Search Reality**
+Search Engine Optimization taught us to chase keywords and backlinks. For two decades, that was the game. But the game has changed. When a user asks ChatGPT "what's the best skincare brand in India?" they don't get ten blue links. They get one answer. One recommendation. One brand.
 
-Large Language Models like ChatGPT, Perplexity, and Gemini don't crawl your meta tags. They don't count your backlinks. They've absorbed the internet's knowledge during training — and they decide who to mention based on something far more nuanced: semantic authority.
+Is it yours?
 
-Semantic authority is how deeply and consistently your brand is associated with a topic across the web. It's built through:
+**Why AI Models Ignore Most Brands**
 
-- **Structured, authoritative content** — long-form guides, FAQs, comparison pages that LLMs can learn from
-- **Third-party citations** — being mentioned in reviews, forums, industry publications
-- **Consistent entity presence** — your brand name appearing alongside the right keywords, concepts, and contexts repeatedly
+Large Language Models like GPT-4o don't crawl the web in real time the way Google does. They were trained on a massive snapshot of the internet — books, articles, forums, product reviews, press coverage — and they learned to associate certain brands with certain topics based on the volume and quality of that data.
 
-**Why Most Brands Fail at This**
+If your brand has thin online presence, inconsistent messaging, or no third-party citations, you simply don't exist in the model's understanding of your category. It's not that ChatGPT dislikes you. It's that it's never heard of you.
 
-Traditional SEO optimizes for crawlers. AEO optimizes for comprehension. If your website is full of keyword-stuffed landing pages with no real depth, LLMs simply won't trust your brand enough to recommend it.
+**The 3 Most Common Reasons Brands Get Ignored**
 
-**What You Can Do Today**
+1. No semantic depth. Your website talks about your products but never establishes deep topical authority. AI models look for brands that comprehensively own a subject area — not just sell within it.
 
-1. Audit what ChatGPT currently says about your brand — ask it directly
-2. Identify the questions your customers ask AI tools
-3. Create dedicated, deeply informative content that answers those questions better than anyone else
-4. Build citations by getting featured in industry roundups, comparison sites, and expert publications
+2. Zero citation footprint. If no trusted publications, review sites, or expert blogs have mentioned your brand in context, the model has no external signal to anchor its recommendation to you.
 
-The brands winning in the AI era aren't the ones with the biggest ad budgets. They're the ones that became the most trusted data source.
-    `,
+3. Entity inconsistency. Your brand name, description, and category are described differently across your website, social profiles, Google Business, and press mentions. AI models get confused and default to the brand they understand most clearly.
+
+**How AEO Fixes This**
+
+Answer Engine Optimization works by systematically building the signals that AI models trust. This means creating deep, authoritative content that covers your topic from every angle. It means getting your brand mentioned in the right publications and contexts. It means making your entity — your brand as a concept — crystal clear across every platform an AI might learn from.
+
+The brands winning on ChatGPT today didn't get there by accident. They got there because they started treating AI search as a channel worth investing in before their competitors did.
+
+The window to be first is still open — but it's closing fast.`,
   },
   {
-    id: 2,
-    title: "OpenAI's New Ad Program: What Brands Need to Know in 2025",
-    excerpt:
-      "The landscape of digital advertising is shifting from banner ads to contextually relevant AI suggestions. We break down the beta features.",
+    id: "2",
     category: "AI Ads",
-    date: "February 2025",
-    gradient: "from-violet-900 via-purple-800 to-pink-900",
-    content: `
-OpenAI quietly began testing sponsored placements inside ChatGPT responses in early 2025. This isn't banner advertising — it's something fundamentally different, and brands need to understand the distinction before their competitors do.
+    categoryColor: "text-brand-violet border-brand-violet/30 bg-brand-violet/10",
+    title: "OpenAI's New Ad Program: What Brands Need to Know in 2026",
+    excerpt: "The landscape of digital advertising is shifting from banner ads to contextually relevant AI suggestions. We break down what's happening.",
+    date: "February 2026",
+    gradient: "from-violet-500/20 to-blue-500/20",
+    content: `OpenAI's move into advertising isn't a rumour anymore. The company has begun piloting sponsored recommendations within ChatGPT, with Criteo confirmed as the first ad tech partner. For brands paying attention, this is one of the most significant shifts in digital advertising since the launch of Google AdWords.
 
-**How AI Advertising Actually Works**
+Here's what we know, what it means, and how to prepare.
 
-Unlike display ads that interrupt users, AI-native advertising works by making your brand the contextually relevant answer. When a user asks ChatGPT for a recommendation, sponsored results appear as natural suggestions — clearly labeled, but woven into the conversation flow.
+**What OpenAI's Ad Program Actually Is**
 
-The key difference: users are in high-intent, decision-making mode when they ask AI tools for recommendations. This is arguably the highest-quality advertising surface ever created.
+Unlike traditional display advertising where you pay to put a banner in front of someone scrolling a page, OpenAI's model embeds brand recommendations directly into AI-generated answers. When a user asks ChatGPT for a product recommendation, a sponsored brand can appear as part of that response — contextually, conversationally, without the jarring interruption of a banner ad.
 
-**What the Beta Looks Like**
+Early conversion data from the pilot is reportedly strong, which makes sense: a user who has just asked "what's the best project management tool for a startup?" and receives a sponsored recommendation is in active purchase intent mode. That's a very different user from someone passively scrolling a feed.
 
-Early testers report that ads appear in response to specific query types:
-- Product comparisons ("best X for Y")
-- Service recommendations ("who offers Z in my area")
-- How-to queries with product implications
+**Why This Changes Everything**
 
-Brands in the beta are seeing click-through rates significantly higher than traditional display advertising, precisely because of this intent alignment.
+Traditional digital advertising has been built around attention — catching someone's eye while they're doing something else. AI advertising is built around intent — answering someone's question at the exact moment they're asking it.
+
+This fundamentally changes the value equation. A sponsored placement in a ChatGPT response is closer to a sales conversation than an ad impression. Brands that understand this will allocate budget accordingly.
 
 **What Brands Should Do Now**
 
-Even if you're not in the beta, preparation is everything:
+The brands best positioned to benefit from paid AI placements are the ones that have already built organic AI visibility. Why? Because AI ad systems are likely to favour brands whose content the model already trusts — it's much easier to amplify an existing signal than to manufacture one from scratch.
 
-1. **Ensure your brand data is clean** — OpenAI pulls from structured data sources. Make sure your business information is consistent everywhere.
-2. **Build content depth** — sponsored placement works best when organic brand authority already exists
-3. **Define your target queries** — what questions do your ideal customers ask AI tools? Those are your future ad targets.
-
-The window to be an early mover here is narrow. The brands establishing AI ad presence now will have a significant advantage when these platforms open to all advertisers.
-    `,
+In other words, AEO is the foundation. Paid AI placements are the accelerator. Build the foundation first.`,
   },
   {
-    id: 3,
-    title: "AEO vs SEO: The Key Differences Every Marketer Must Understand",
-    excerpt:
-      "Understanding the paradigm shift from keywords to intents is critical for survival in the next decade of search behavior.",
+    id: "3",
     category: "Strategy",
-    date: "January 2025",
-    gradient: "from-cyan-900 via-teal-800 to-emerald-900",
-    content: `
-If you've spent the last decade mastering SEO, here's what you need to know: the skills transfer, but the strategy doesn't. Answer Engine Optimization is a different discipline built for a different era.
+    categoryColor: "text-cyan-400 border-cyan-400/30 bg-cyan-400/10",
+    title: "AEO vs SEO: The Key Differences Every Marketer Must Understand",
+    excerpt: "Understanding the paradigm shift from keywords to intents is critical for survival in the next decade of search behaviour.",
+    date: "January 2026",
+    gradient: "from-blue-500/20 to-cyan-500/20",
+    content: `Marketers who built their careers on SEO are facing an uncomfortable question: does everything I know still apply?
 
-**The Core Philosophical Difference**
+The honest answer is: some of it does, most of it doesn't, and the parts that don't are exactly the parts that matter most in AI-powered search.
 
-SEO asks: "How do I rank for this keyword?"
-AEO asks: "How do I become the answer to this question?"
+**What SEO and AEO Share**
 
-This sounds like a subtle distinction, but it drives completely different execution.
+Both disciplines care about the quality and trustworthiness of your content. Both reward brands that genuinely know their subject matter. Both penalise thin, spammy, or duplicated content. If you've done good SEO work — building real authority through genuine expertise — you're starting from a better position than most.
 
-SEO optimizes for algorithms that match queries to pages. AEO optimizes for AI systems that synthesize information to generate direct answers. One is about visibility in a list. The other is about being the singular trusted source.
+**Where They Diverge**
 
-**Key Tactical Differences**
+SEO is fundamentally about ranking in a list. The goal is to appear on page one, ideally in position one, for a set of target keywords. Success is measured in click-through rates, impressions, and organic traffic.
 
-| SEO | AEO |
-|-----|-----|
-| Keyword density | Semantic depth |
-| Backlink quantity | Citation quality |
-| Page speed | Content comprehensiveness |
-| Meta descriptions | Structured data markup |
-| Ranking position | AI mention frequency |
+AEO is about being the answer. There is no list. There is no position two. When ChatGPT responds to a query, it cites one brand, or maybe two or three. Everyone else is invisible. Success is measured in citation frequency, sentiment, and share of AI-generated recommendations.
 
-**The Content Approach**
+This changes everything about strategy. In SEO, you target keywords. In AEO, you build topical authority. In SEO, you chase backlinks. In AEO, you build citation quality. In SEO, you optimise meta tags. In AEO, you optimise structured data and entity clarity.
 
-SEO content is often built around search volume. AEO content is built around question depth. A 500-word blog post targeting a keyword is an SEO asset. A 3,000-word definitive guide that answers every related question a user might have is an AEO asset.
+**The Transition**
 
-LLMs reward completeness, accuracy, and the presence of your content in high-authority contexts.
+Brands don't need to abandon SEO. Google is still enormously important, and will be for years. But the smart play is to start building AEO infrastructure now — before every competitor wakes up to what's happening. The brands that treat AEO as an add-on in 2027 will be playing catch-up to the ones who treated it as a priority in 2026.`,
+  },
+  {
+    id: "4",
+    category: "Research",
+    categoryColor: "text-green-400 border-green-400/30 bg-green-400/10",
+    title: "India's Top D2C Brands: Who ChatGPT Recommends And Who It Ignores",
+    excerpt: "We queried ChatGPT with 20 different D2C category prompts and tracked which Indian brands appeared. The results were revealing — and concerning for most.",
+    date: "March 2026",
+    gradient: "from-green-500/20 to-cyan-500/20",
+    content: `We ran an experiment. Over the course of two weeks, we asked ChatGPT-4o the same 20 D2C category questions — skincare, haircare, supplements, home decor, snacking, personal care, fashion basics, and more — and tracked which Indian brands it recommended, how often, and in what context.
 
-**Should You Abandon SEO?**
+The findings were striking. A small cluster of brands appeared repeatedly. The vast majority didn't appear at all.
 
-No. Google still drives significant traffic and the two disciplines complement each other. Strong AEO content — comprehensive, authoritative, well-structured — also tends to rank well on Google.
+**The Methodology**
 
-The brands that will win are those who understand both games and play them simultaneously. Start by auditing your existing content for AEO gaps: where are you thin on depth? Where are competitor brands being cited by AI tools instead of you?
+We used 20 prompts across 8 D2C categories, each phrased three different ways: direct recommendation, comparison, and problem-solution format. Examples:
 
-That gap is your opportunity.
-    `,
+- "What's the best Indian skincare brand for oily skin?"
+- "Compare Indian D2C skincare brands"
+- "I have oily skin and want an Indian brand that actually works — what do you recommend?"
+
+Each prompt was run five times on fresh sessions to account for model variability. We tracked first mention, total mentions, and sentiment (positive, neutral, or hedged).
+
+**Who Won**
+
+In skincare, Minimalist dominated — appearing in 94% of relevant responses, almost always as the first recommendation. The Derma Co and Plum followed with strong but less consistent presence. Dot & Key appeared frequently in "aesthetic" or "gifting" contexts.
+
+In supplements and nutrition, Wellbeing Nutrition and Oziva appeared consistently. MuscleBlaze dominated the fitness and protein sub-category almost unchallenged.
+
+In snacking, Too Yumm and Yoga Bar had strong AI presence. Interestingly, several newer VC-backed snacking brands with significant marketing budgets had near-zero AI visibility.
+
+**Who Got Ignored — And Why**
+
+Several well-funded D2C brands with strong Instagram followings and significant ad spend were essentially invisible in ChatGPT responses. This is the core insight: social media presence and paid advertising do not translate into AI visibility.
+
+The brands that ChatGPT recommends are the ones with deep content ecosystems (blogs, guides, expert articles) that establish category authority, consistent third-party coverage in publications like YourStory, Inc42, Economic Times, and Healthline India, clear and consistent entity descriptions across their website and press materials, and structured data that makes their product categories machine-readable.
+
+One brand we analysed had spent heavily on influencer marketing for two years. Beautiful content. Millions of followers. Zero ChatGPT mentions. Their entire digital presence was built on platforms that AI models don't learn from effectively — short-form video and paid social.
+
+**The Implication for Indian D2C Brands**
+
+India's D2C market is growing rapidly. The brands that will capture disproportionate share are the ones that AI systems trust and recommend. Right now, fewer than 3% of Indian D2C brands have any meaningful AI search presence.
+
+The gap between the brands AI recommends and the brands with the biggest marketing budgets is wide — and that gap is an opportunity. Building AI visibility now, before the category gets crowded, is one of the highest-leverage investments a D2C brand can make.
+
+If your brand wasn't in our results, the question isn't whether you should act. It's how fast.`,
+  },
+  {
+    id: "5",
+    category: "Data",
+    categoryColor: "text-orange-400 border-orange-400/30 bg-orange-400/10",
+    title: "What Happened When We Asked ChatGPT to Recommend a SaaS Tool 100 Times",
+    excerpt: "We ran 100 identical SaaS recommendation queries across ChatGPT, Perplexity, and Gemini. The consistency — and the surprises — tell a clear story about how AI visibility actually works.",
+    date: "March 2026",
+    gradient: "from-orange-500/20 to-red-500/20",
+    content: `Here's a question most SaaS founders haven't thought to ask: if 100 of your potential customers asked ChatGPT to recommend a tool in your category, how many times would your product come up?
+
+We decided to find out — not just for one product, but across six SaaS categories. We ran 100 queries per category across ChatGPT-4o, Perplexity, and Gemini. Here's what we found.
+
+**The Setup**
+
+Six categories: project management, email marketing, HR software, CRM, accounting software, and customer support tools. For each category, we used a single consistent prompt — "What's the best [category] tool for a small business in India?" — and ran it 100 times across fresh sessions on each platform over a three-week period.
+
+We tracked which tools were mentioned, in what position, how consistently, and with what sentiment.
+
+**The Data**
+
+In project management, the top 3 tools — Notion, Asana, and Monday.com — accounted for 89 out of 100 first-position mentions on ChatGPT. The remaining 11 were split across 6 other tools. Indian-origin tools like Kissflow appeared 4 times total.
+
+In email marketing, Mailchimp was mentioned first 71 times. Brevo (formerly Sendinblue) appeared 18 times. Every other tool combined accounted for 11 mentions.
+
+In CRM, Zoho CRM — an Indian product — performed remarkably well, appearing in 43% of responses. This is notable and instructive: Zoho has invested heavily in content, documentation, third-party reviews, and structured data for over a decade. That infrastructure pays dividends in AI visibility.
+
+In HR software, Darwinbox — another Indian product — appeared in only 6% of responses despite being one of India's most well-funded HR tech companies. Their AI presence is significantly below their actual market share.
+
+**What Drives Consistency**
+
+The tools that appeared most consistently shared a clear set of characteristics. They had extensive documentation and help content indexed across the web. They had thousands of third-party reviews on sites like G2, Capterra, and Trustpilot. They were mentioned in comparison articles, "best of" lists, and expert guides published on high-authority domains.
+
+Tools that appeared inconsistently — or not at all — tended to rely heavily on paid acquisition and had thin organic content footprints.
+
+**The Platform Differences**
+
+Perplexity was notably more variable than ChatGPT — it cited more tools overall and was more likely to surface newer or niche options. This is because Perplexity performs live web searches to inform its answers, making it more responsive to recent content.
+
+Gemini was the most conservative, sticking closely to established market leaders and rarely surfacing tools outside the top 5 in any category.
+
+This has a strategic implication: if you want consistent AI visibility, you need to build authority that works across multiple platforms. A strategy optimised only for ChatGPT will leave significant reach on the table.
+
+**What This Means for SaaS Brands**
+
+If you're running a SaaS company in India and you haven't run this test for your own category, do it now. The results will either reassure you or alarm you — and either way, you'll have information you need.
+
+The SaaS brands with strong AI visibility today didn't build it overnight. They built it through years of content, community, and citation building. But the compounding nature of AI visibility means that starting now is dramatically better than starting after your competitors have locked in their positions.
+
+The question isn't whether AI recommendation matters for SaaS growth in 2026. It does, measurably. The question is whether your brand will be the one getting recommended.`,
   },
 ];
 
-function renderContent(content: string) {
-  return content
-    .trim()
-    .split("\n")
-    .map((line, i) => {
-      if (line.startsWith("**") && line.endsWith("**")) {
-        return (
-          <h3 key={i} className="text-text-primary font-bold text-base mt-6 mb-2">
-            {line.replace(/\*\*/g, "")}
-          </h3>
-        );
-      }
-      if (line.startsWith("- ")) {
-        return (
-          <li key={i} className="text-text-secondary text-sm leading-relaxed ml-4 list-disc">
-            {line.replace(/\*\*(.*?)\*\*/g, "$1").slice(2)}
-          </li>
-        );
-      }
-      if (line.startsWith("|")) return null; // skip table lines for simplicity
-      if (line.trim() === "") return <div key={i} className="h-2" />;
-      return (
-        <p key={i} className="text-text-secondary text-sm leading-relaxed">
-          {line.replace(/\*\*(.*?)\*\*/g, "$1")}
-        </p>
-      );
-    });
-}
-
 export default function InsightsPage() {
-  const [expandedId, setExpandedId] = useState<number | null>(null);
-
-  const toggle = (id: number) => {
-    setExpandedId(expandedId === id ? null : id);
-  };
-
   return (
     <main className="min-h-screen bg-surface">
       <Navbar />
 
       {/* Header */}
       <section className="relative pt-32 pb-16 text-center overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-brand-violet/8 blur-3xl rounded-full pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-brand-blue/8 blur-3xl rounded-full pointer-events-none" />
         <div className="relative max-w-7xl mx-auto px-6">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-surface-border bg-surface-card text-text-secondary text-xs font-medium mb-6">
             ✦ Updated Monthly
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-4">
-            Insigh<GradientText>ts</GradientText>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
+            <GradientText>Insights</GradientText>
           </h1>
           <p className="text-text-secondary text-lg max-w-xl mx-auto">
-            Decoding the future of brand visibility. Stay ahead of the AI
-            advertising curve with expert analysis.
+            Stay ahead of the AI advertising curve.
           </p>
         </div>
       </section>
 
-      {/* Blog Grid */}
-      <section className="max-w-7xl mx-auto px-6 pb-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {BLOG_POSTS.map((post) => {
-            const isExpanded = expandedId === post.id;
-            return (
-              <article
-                key={post.id}
-                className={`card-dark rounded-2xl overflow-hidden transition-all duration-300 ${
-                  isExpanded ? "md:col-span-2" : "hover:-translate-y-1"
-                }`}
-              >
-                {/* Gradient Thumbnail — hide when expanded */}
-                {!isExpanded && (
-                  <div
-                    className={`h-48 bg-gradient-to-br ${post.gradient} flex items-center justify-center relative overflow-hidden`}
-                  >
-                    <div className="absolute inset-0 bg-surface-card/40" />
-                    <div className="relative">
-                      <span
-                        className={`px-3 py-1 rounded-full text-xs font-semibold border ${
-                          categoryColors[post.category] ||
-                          "text-brand-blue border-brand-blue/30 bg-brand-blue/10"
-                        }`}
-                      >
-                        {post.category}
-                      </span>
-                    </div>
-                  </div>
-                )}
-
-                {/* Content */}
-                <div className="p-6">
-                  {/* Meta */}
-                  <div className="flex items-center justify-between mb-3">
-                    <div className="flex items-center gap-3">
-                      <div className="flex items-center gap-1.5 text-text-muted text-xs">
-                        <Calendar size={12} />
-                        <span>{post.date}</span>
-                      </div>
-                      {isExpanded && (
-                        <span
-                          className={`px-3 py-1 rounded-full text-xs font-semibold border ${
-                            categoryColors[post.category] ||
-                            "text-brand-blue border-brand-blue/30 bg-brand-blue/10"
-                          }`}
-                        >
-                          {post.category}
-                        </span>
-                      )}
-                    </div>
-                  </div>
-
-                  <h2 className="text-text-primary font-bold text-lg mb-3 leading-snug">
-                    {post.title}
-                  </h2>
-                  <p className="text-text-secondary text-sm leading-relaxed mb-4">
-                    {post.excerpt}
-                  </p>
-
-                  {/* Expanded Content */}
-                  {isExpanded && (
-                    <div className="mt-4 pt-4 border-t border-surface-border space-y-1">
-                      {renderContent(post.content)}
-                    </div>
-                  )}
-
-                  {/* Toggle Button */}
-                  <button
-                    onClick={() => toggle(post.id)}
-                    className="flex items-center gap-1.5 text-brand-blue text-sm font-medium mt-4 hover:gap-2 transition-all duration-200"
-                  >
-                    {isExpanded ? (
-                      <>
-                        Show Less <ChevronUp size={14} />
-                      </>
-                    ) : (
-                      <>
-                        Read More <ChevronDown size={14} />
-                      </>
-                    )}
-                  </button>
-                </div>
-              </article>
-            );
-          })}
-        </div>
+      {/* Posts */}
+      <section className="max-w-4xl mx-auto px-6 pb-16 space-y-6">
+        {POSTS.map((post) => (
+          <PostCard key={post.id} post={post} />
+        ))}
       </section>
 
-      {/* Newsletter Section */}
-      <section className="max-w-7xl mx-auto px-6 pb-24">
-        <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-surface-card to-surface-muted border border-surface-border p-12 md:p-16 text-center">
+      {/* Newsletter */}
+      <section className="max-w-4xl mx-auto px-6 pb-24">
+        <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-brand-blue/10 to-brand-violet/10 border border-brand-blue/20 p-10 text-center">
           <div className="absolute inset-0 bg-gradient-to-br from-brand-blue/5 to-brand-violet/5 pointer-events-none" />
           <div className="relative">
-            <h2 className="text-2xl md:text-3xl font-bold text-text-primary mb-3">
-              Get our weekly AI Visibility Report — see which Indian brands are winning and losing in AI search this week.
-            </h2>
-            <p className="text-text-secondary text-sm mb-8 max-w-md mx-auto">
-              Join marketing leaders receiving our monthly deep-dive into AI
-              search algorithms.
+            <h3 className="text-text-primary font-bold text-xl md:text-2xl mb-3">
+              Get our weekly AI Visibility Report
+            </h3>
+            <p className="text-text-secondary text-sm mb-6 max-w-lg mx-auto">
+              See which Indian brands are winning and losing in AI search this week.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
               <input
                 type="email"
-                placeholder="Enter your work email"
-                className="flex-1 px-4 py-3 rounded-full bg-surface border border-surface-border text-text-primary text-sm placeholder:text-text-muted focus:outline-none focus:border-brand-blue/50 transition-colors"
+                placeholder="your@email.com"
+                className="flex-1 px-4 py-3 rounded-xl bg-surface border border-surface-border text-text-primary text-sm placeholder:text-text-muted focus:outline-none focus:border-brand-blue/50 transition-colors"
               />
-              <a
-                href="/apply"
-                className="px-6 py-3 rounded-full bg-gradient-to-r from-brand-blue to-brand-violet text-white text-sm font-semibold hover:opacity-90 transition-opacity whitespace-nowrap"
-              >
-                Subscribe Now →
-              </a>
+              <button className="px-6 py-3 rounded-xl bg-gradient-to-r from-brand-blue to-brand-violet text-white font-semibold text-sm hover:opacity-90 transition-opacity whitespace-nowrap">
+                Subscribe →
+              </button>
             </div>
-            <p className="text-text-muted text-xs mt-4">No spam. Unsubscribe anytime.</p>
           </div>
         </div>
       </section>
 
       <Footer />
     </main>
+  );
+}
+
+function PostCard({ post }: { post: typeof POSTS[0] }) {
+  const [expanded, setExpanded] = useState(false);
+
+  return (
+    <article className="card-dark rounded-2xl overflow-hidden border border-surface-border hover:border-brand-blue/30 transition-colors duration-300">
+      <div className={`h-2 w-full bg-gradient-to-r ${post.gradient}`} />
+      <div className="p-7">
+        <div className="flex items-center gap-3 mb-4">
+          <span className={`text-xs font-semibold px-3 py-1 rounded-full border ${post.categoryColor}`}>
+            {post.category}
+          </span>
+          <span className="text-text-muted text-xs">{post.date}</span>
+        </div>
+        <h2 className="text-text-primary font-bold text-lg md:text-xl leading-snug mb-3">
+          {post.title}
+        </h2>
+        <p className="text-text-secondary text-sm leading-relaxed mb-5">
+          {post.excerpt}
+        </p>
+        {expanded && (
+          <div className="border-t border-surface-border pt-6 mb-5 space-y-4">
+            {post.content.split("\n\n").map((para, i) => {
+              if (para.startsWith("**") && para.endsWith("**")) {
+                return (
+                  <h3 key={i} className="text-text-primary font-bold text-base mt-6 mb-1">
+                    {para.replace(/\*\*/g, "")}
+                  </h3>
+                );
+              }
+              if (para.includes("**")) {
+                return (
+                  <p key={i} className="text-text-secondary text-sm leading-relaxed"
+                    dangerouslySetInnerHTML={{
+                      __html: para.replace(/\*\*(.*?)\*\*/g, '<strong class="text-text-primary">$1</strong>')
+                    }}
+                  />
+                );
+              }
+              if (para.startsWith("- ") || para.includes("\n- ")) {
+                return (
+                  <ul key={i} className="space-y-1.5 pl-4">
+                    {para.split("\n").filter(l => l.trim()).map((line, j) => (
+                      <li key={j} className="text-text-secondary text-sm list-disc list-inside">
+                        {line.replace(/^- /, "")}
+                      </li>
+                    ))}
+                  </ul>
+                );
+              }
+              return (
+                <p key={i} className="text-text-secondary text-sm leading-relaxed">
+                  {para}
+                </p>
+              );
+            })}
+          </div>
+        )}
+        <button
+          onClick={() => setExpanded(!expanded)}
+          className="inline-flex items-center gap-1.5 text-brand-blue text-sm font-semibold hover:opacity-80 transition-opacity"
+        >
+          {expanded ? "Show Less ↑" : "Read More →"}
+        </button>
+      </div>
+    </article>
   );
 }

@@ -312,6 +312,99 @@ export default function ApplyPage() {
           </div>
         </div>
       </section>
+      
+      {/* ── WHAT HAPPENS NEXT ── */}
+      <section className="max-w-3xl mx-auto px-6 pb-24">
+        <div className="relative rounded-2xl border border-brand-blue/20 bg-gradient-to-br from-brand-blue/5 to-brand-violet/5 overflow-hidden p-8 md:p-10">
+          <div className="absolute top-0 right-0 w-48 h-48 bg-brand-violet/10 blur-3xl rounded-full pointer-events-none" />
+
+          <div className="relative">
+            {/* Heading */}
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-brand-blue to-brand-violet flex items-center justify-center flex-shrink-0">
+                <span className="text-white text-xs font-bold">✓</span>
+              </div>
+              <div>
+                <h3 className="text-text-primary font-bold text-lg">What Happens Next</h3>
+                <p className="text-text-muted text-xs">No commitment. No surprises. Here's exactly what to expect.</p>
+              </div>
+            </div>
+
+            {/* Steps */}
+            <div className="space-y-0">
+              {[
+                {
+                  step: "01",
+                  title: "We review your application",
+                  desc: "Within 24 hours, our team reads through your submission and researches your brand's current AI visibility.",
+                  time: "Within 24 hours",
+                  color: "text-brand-blue",
+                  border: "border-brand-blue/30",
+                  bg: "bg-brand-blue/10",
+                },
+                {
+                  step: "02",
+                  title: "We send you a free AI Snapshot",
+                  desc: "You'll receive a preliminary report showing how your brand currently appears (or doesn't) on ChatGPT, Perplexity, and Gemini. No strings attached.",
+                  time: "Day 1–2",
+                  color: "text-brand-violet",
+                  border: "border-brand-violet/30",
+                  bg: "bg-brand-violet/10",
+                },
+                {
+                  step: "03",
+                  title: "We schedule a 20-min strategy call",
+                  desc: "A focused call to walk you through the findings, answer your questions, and understand your goals — zero sales pressure.",
+                  time: "Day 2–4",
+                  color: "text-cyan-400",
+                  border: "border-cyan-400/30",
+                  bg: "bg-cyan-400/10",
+                },
+                {
+                  step: "04",
+                  title: "We propose a custom plan",
+                  desc: "Only if it makes sense for your brand, we'll share a tailored AEO strategy and plan. You decide if and when you want to proceed.",
+                  time: "Day 4–5",
+                  color: "text-green-400",
+                  border: "border-green-400/30",
+                  bg: "bg-green-400/10",
+                },
+              ].map((item, i, arr) => (
+                <div key={i} className="flex gap-5">
+                  {/* Left: step number + connector */}
+                  <div className="flex flex-col items-center flex-shrink-0">
+                    <div className={`w-10 h-10 rounded-full border ${item.border} ${item.bg} flex items-center justify-center flex-shrink-0`}>
+                      <span className={`text-xs font-bold ${item.color}`}>{item.step}</span>
+                    </div>
+                    {i < arr.length - 1 && (
+                      <div className="w-px flex-1 bg-surface-border my-1" style={{ minHeight: "24px" }} />
+                    )}
+                  </div>
+
+                  {/* Right: content */}
+                  <div className={`pb-8 ${i === arr.length - 1 ? "pb-0" : ""}`}>
+                    <div className="flex items-center gap-2 mb-1">
+                      <h4 className="text-text-primary font-semibold text-sm">{item.title}</h4>
+                      <span className={`text-xs px-2 py-0.5 rounded-full border ${item.border} ${item.bg} ${item.color} font-medium`}>
+                        {item.time}
+                      </span>
+                    </div>
+                    <p className="text-text-secondary text-sm leading-relaxed">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Bottom note */}
+            <div className="mt-8 pt-6 border-t border-surface-border flex items-start gap-3">
+              <span className="text-brand-blue text-lg flex-shrink-0">🔒</span>
+              <p className="text-text-muted text-xs leading-relaxed">
+                Submitting this form is <strong className="text-text-secondary">not a commitment</strong> to purchase anything. We review every application personally and only move forward when there's a clear fit. Your information is kept strictly private.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </main>

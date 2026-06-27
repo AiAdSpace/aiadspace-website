@@ -38,13 +38,13 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
-            src="/aiadspace-logo-v4.svg"
+            src="/aiadspace-logo-v5.png"
             alt="AiAdSpace"
-            width={180}
-            height={40}
+            width={360}
+            height={60}
             priority
-            className="h-8 w-auto"
-          />
+            className="h-12 w-48 md:h-14 md:w-64 object-contain"
+        />
         </Link>
 
         {/* Desktop Nav Links */}

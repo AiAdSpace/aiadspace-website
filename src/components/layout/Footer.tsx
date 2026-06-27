@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Twitter, Linkedin, Github, Mail, Phone } from "lucide-react";
+import { Instagram, Linkedin, Mail, Phone } from "lucide-react";
 import { SITE_CONFIG, FOOTER_LINKS } from "@/lib/constants";
 
 export default function Footer() {
@@ -8,15 +8,14 @@ export default function Footer() {
     <footer className="border-t border-surface-border bg-surface">
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
-          {/* Brand Column */}
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block mb-4">
               <Image
-                src="/aiadspace-logo-v4.svg"
+                src="/aiadspace-logo-v5.png"
                 alt="AiAdSpace"
-                width={160}
-                height={36}
-                className="h-8 w-auto"
+                width={360}
+                height={60}
+                className="h-12 w-48 md:h-14 md:w-64 object-contain"
               />
             </Link>
             <p className="text-text-secondary text-sm leading-relaxed max-w-xs mb-5">
@@ -24,7 +23,6 @@ export default function Footer() {
               brand is the answer, not just an option.
             </p>
 
-            {/* Contact Info */}
             <div className="space-y-2 mb-6">
               <a
                 href="mailto:hello@aiadspace.in"
@@ -42,16 +40,15 @@ export default function Footer() {
               </a>
             </div>
 
-            {/* Social Icons */}
             <div className="flex items-center gap-4">
               <Link
-                href={SITE_CONFIG.social.twitter}
+                href="https://www.instagram.com/aiadspace.in/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-text-muted hover:text-brand-blue transition-colors duration-200"
-                aria-label="Twitter"
+                aria-label="Instagram"
               >
-                <Twitter size={18} />
+                <Instagram size={18} />
               </Link>
               <Link
                 href={SITE_CONFIG.social.linkedin}
@@ -62,19 +59,9 @@ export default function Footer() {
               >
                 <Linkedin size={18} />
               </Link>
-              <Link
-                href={SITE_CONFIG.social.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-text-muted hover:text-brand-blue transition-colors duration-200"
-                aria-label="GitHub"
-              >
-                <Github size={18} />
-              </Link>
             </div>
           </div>
 
-          {/* Solutions */}
           <div>
             <h3 className="text-text-primary text-sm font-semibold uppercase tracking-wider mb-4">
               Solutions
@@ -93,7 +80,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Company */}
           <div>
             <h3 className="text-text-primary text-sm font-semibold uppercase tracking-wider mb-4">
               Company
@@ -112,7 +98,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Legal */}
           <div>
             <h3 className="text-text-primary text-sm font-semibold uppercase tracking-wider mb-4">
               Legal
@@ -132,10 +117,9 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-surface-border flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-text-muted text-sm">
-            © 2026 AiAdSpace. All rights reserved. Built for the AI era.
+            &copy; 2026 AiAdSpace. All rights reserved. Built for the AI era.
           </p>
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
